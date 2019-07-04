@@ -1,0 +1,7 @@
+// var exp = require(exports)
+// var bp =require('body-parser')
+//  app=exp()
+//  app.use(bp.json())
+//  app.use("/filepath",f1)
+//  app.listen(3000)
+//  console.log("sever is started......")

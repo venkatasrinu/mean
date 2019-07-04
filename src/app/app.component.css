@@ -1,0 +1,15 @@
+nbar{
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    .nav-link
+    {
+    color:"blue"
+    }
+    nav ul li a{
+    padding-left:70px;
+    font-size: 3ch;
+    font-display: 'bold';
+    font-family:serif
+    
+    }
+    
