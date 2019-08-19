@@ -3,6 +3,7 @@ import { BuyService} from './buy.service';
 import { SellService} from '../services/sell'
 import {Http} from '@angular/http'
 import 'rxjs/add/operator/map';
+import { faCoffee } from '../../node_modules/@fortawesome/free-solid-svg-icons';
 
 
 
@@ -13,7 +14,9 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit { 
- uname="";data;
+  //faCoffee = faCoffee;
+ uname="";
+  data;
   constructor (private myservice :BuyService,private sellsel :SellService,private http :Http){}
   
   ngOnInit()  {
@@ -34,21 +37,34 @@ export class AppComponent implements OnInit {
 
  
   funins(){
+    //alert("coming")
     var ob={name:this.uname}
+    //alert(ob.name)
+ console.log("ob ", ob);
+
 
     this.http.post("users/ins",ob).subscribe(
-      dt=>{      
+      dt=>{     
+         this.data=dt.json()
+ console.log("data ", this.data);
+  
+       
+localStorage.login = "yes";
       console.log(dt,"dttttttttt")    
-    this.getdata();
+      this.uname=""
+    //this.getdata();
   })
  };
- getdata(){
-   this.http.get("users/getdata").subscribe(
-     dt=>{
-      // this.data=JSON.parse(dt._body)
-      console.log(dt,"datadb")
-     }
-   )
- }
+ 
+//  etdata(){
+//    this.http.get("users/getdata").subscribe(
+//      dt=>{
+
+//       console.log(dt,"datadb")
+//      }
+//    )
+//  }g
+       // this.data=JSON.parse(dt._body)
+
 
 }

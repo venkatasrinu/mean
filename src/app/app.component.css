@@ -12,4 +12,7 @@ nbar{
     font-family:serif
     
     }
+    input[type="file"]{
+        visibility: hidden;
+    }
     

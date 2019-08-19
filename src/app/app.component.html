@@ -37,23 +37,28 @@
  <input type="text" [(ngModel)]="uname"> <br><br>
  <input type="button" value="Enter" (click)="funins()">
 </div>
+
+
 </div>
 </div>
 <table class="table table-bordered" >
 <thead>
   <tr><th>#</th>
-    <th>Category</th></tr>
+    <th>Category</th>
+  </tr>
 </thead>
 <tbody>
   <tr *ngFor="let ob of data">
-    <th>{{ob.uname}}</th>
-
-
+    <th>{{ob.name}}</th>
+    <th>{{ob._id}}</th>
   </tr>
 
 </tbody>
 
 </table>
+<button type="button" (click)="filepick.click()">upload image</button>
+<input type="file" #filepick>
+
 
 
 

@@ -6,6 +6,7 @@ import {HttpModule} from '@angular/http'
 import {FormsModule} from "@angular/forms";
 //import { BuyService } from './buy.service'
 import { SellService} from '../services/sell'
+//import { FontAwesomeModule} from '../../node_modules/@fortawesome/angular-fontawesome'
 
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
